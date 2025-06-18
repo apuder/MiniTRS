@@ -446,7 +446,9 @@
     }
   },
   "libraries": {
-    "pinned_footprint_libs": [],
+    "pinned_footprint_libs": [
+      "Library"
+    ],
     "pinned_symbol_libs": []
   },
   "meta": {
@@ -722,6 +724,26 @@
       "Key_Z"
     ],
     [
+      "5a1e5b4a-caa1-45e6-8bf0-1272be35ba11",
+      "Key_Enter_2"
+    ],
+    [
+      "53ed0d9f-56a9-477a-b5b0-d82e9ee14346",
+      "Key_Space_2"
+    ],
+    [
+      "03e19e54-6599-4cec-9c13-1040d0c9a7b3",
+      "Key_Space_3"
+    ],
+    [
+      "1eb107e0-86b8-40e3-bbf1-68f7d86a6fd2",
+      "Key_0_Num"
+    ],
+    [
+      "df0dc9e8-891e-4b88-8c5d-e46b14cade72",
+      "Key_1_Num"
+    ],
+    [
       "0a38b20d-0faa-4d31-a26b-20b67656c706",
       "Key_0"
     ],
@@ -787,7 +809,7 @@
     ],
     [
       "ef596442-4faa-4473-b2b4-5b6601bfdc98",
-      "Key_Enter"
+      "Key_Enter_1"
     ],
     [
       "95881138-91f0-4cce-a1e0-677178aa263b",
@@ -815,7 +837,7 @@
     ],
     [
       "1fe60ac2-c983-40d1-a281-3641b8cb25a1",
-      "Key_Space"
+      "Key_Space_1"
     ],
     [
       "63cdcd2d-252d-4e9b-8416-81b1ef161316",
@@ -828,6 +850,46 @@
     [
       "96914db0-479c-4269-8d64-79a09cf1464b",
       "Key_Reset"
+    ],
+    [
+      "69b1d1ec-8387-44f7-a838-b6d24599c077",
+      "Key_2_Num"
+    ],
+    [
+      "3e4262d3-7e8a-4be5-8940-6ee58babaa4e",
+      "Key_3_Num"
+    ],
+    [
+      "6d1a5cc9-05ff-4514-870b-d92d4e7f20d7",
+      "Key_4_Num"
+    ],
+    [
+      "a0e49a48-5b42-4ed9-bb98-25da31a7426a",
+      "Key_5_Num"
+    ],
+    [
+      "5ecf1c0e-79d8-4322-bb79-173a1144918b",
+      "Key_6_Num"
+    ],
+    [
+      "f43a5c84-e92d-4f60-bebe-d8d1cffb1cd4",
+      "Key_7_Num"
+    ],
+    [
+      "d8116153-b017-4756-b331-164053fc25d1",
+      "Key_8_Num"
+    ],
+    [
+      "3ce54b27-6dfd-4362-b55f-6b7a956f8932",
+      "Key_9_Num"
+    ],
+    [
+      "62e5320d-f8ce-4c7b-a38b-1e6c37e2c7a2",
+      "Key_Dot_Num"
+    ],
+    [
+      "9b16f006-50f9-4ce4-ae42-c5c18fa91fce",
+      "Key_Enter_Num"
     ]
   ],
   "text_variables": {}
