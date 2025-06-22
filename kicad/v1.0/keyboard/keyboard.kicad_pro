@@ -51,7 +51,13 @@
           "min_clearance": 0.5
         }
       },
-      "diff_pair_dimensions": [],
+      "diff_pair_dimensions": [
+        {
+          "gap": 0.0,
+          "via_gap": 0.0,
+          "width": 0.0
+        }
+      ],
       "drc_exclusions": [],
       "meta": {
         "version": 2
@@ -180,7 +186,10 @@
           "td_width_to_size_filter_ratio": 0.9
         }
       ],
-      "track_widths": [],
+      "track_widths": [
+        0.0,
+        0.2
+      ],
       "tuning_pattern_settings": {
         "diff_pair_defaults": {
           "corner_radius_percentage": 80,
@@ -207,7 +216,16 @@
           "spacing": 0.6
         }
       },
-      "via_dimensions": [],
+      "via_dimensions": [
+        {
+          "diameter": 0.0,
+          "drill": 0.0
+        },
+        {
+          "diameter": 0.6,
+          "drill": 0.3
+        }
+      ],
       "zones_allow_external_fillets": false
     },
     "ipc2581": {
@@ -409,7 +427,7 @@
       "different_unit_net": "error",
       "duplicate_reference": "error",
       "duplicate_sheet_names": "error",
-      "endpoint_off_grid": "warning",
+      "endpoint_off_grid": "ignore",
       "extra_units": "error",
       "footprint_filter": "ignore",
       "footprint_link_issues": "warning",
@@ -521,16 +539,46 @@
           "show": true
         },
         {
+          "group_by": true,
+          "label": "Value",
+          "name": "Value",
+          "show": true
+        },
+        {
+          "group_by": true,
+          "label": "Footprint",
+          "name": "Footprint",
+          "show": true
+        },
+        {
+          "group_by": false,
+          "label": "Datasheet",
+          "name": "Datasheet",
+          "show": true
+        },
+        {
+          "group_by": false,
+          "label": "Description",
+          "name": "Description",
+          "show": false
+        },
+        {
           "group_by": false,
           "label": "Qty",
           "name": "${QUANTITY}",
           "show": true
         },
         {
-          "group_by": true,
-          "label": "Value",
-          "name": "Value",
-          "show": true
+          "group_by": false,
+          "label": "#",
+          "name": "${ITEM_NUMBER}",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "LCSC",
+          "name": "LCSC",
+          "show": false
         },
         {
           "group_by": true,
@@ -549,24 +597,12 @@
           "label": "Exclude from Board",
           "name": "${EXCLUDE_FROM_BOARD}",
           "show": true
-        },
-        {
-          "group_by": true,
-          "label": "Footprint",
-          "name": "Footprint",
-          "show": true
-        },
-        {
-          "group_by": false,
-          "label": "Datasheet",
-          "name": "Datasheet",
-          "show": true
         }
       ],
       "filter_string": "",
       "group_symbols": true,
       "include_excluded_from_bom": true,
-      "name": "Default Editing",
+      "name": "",
       "sort_asc": true,
       "sort_field": "Reference"
     },
@@ -614,282 +650,6 @@
     [
       "0f558864-6bd1-4b6a-a590-291604d36a33",
       "Root"
-    ],
-    [
-      "345ce68e-f3af-4e5e-877d-709f628b1b76",
-      "Key_A"
-    ],
-    [
-      "20b7b40a-3c8d-4458-ab90-f98eeaa551d5",
-      "Key_AT"
-    ],
-    [
-      "c06ec5e7-dd0f-490e-9240-4028b3f3b144",
-      "Key_B"
-    ],
-    [
-      "49d82c6b-e038-4a44-9811-3e56db29216f",
-      "Key_C"
-    ],
-    [
-      "f425da7c-e87f-4066-9155-e37bca266c43",
-      "Key_D"
-    ],
-    [
-      "26d58396-7064-4fca-877d-9072c88b3046",
-      "Key_E"
-    ],
-    [
-      "eed167b7-318d-4b2a-8a01-41ebf77ab005",
-      "Key_F"
-    ],
-    [
-      "27f41226-a040-4c76-ad3d-de57922f3ec2",
-      "Key_G"
-    ],
-    [
-      "53d2e055-0677-4f48-9cac-149fa85b63d8",
-      "Key_H"
-    ],
-    [
-      "39af1378-64d6-493b-9598-cca883cd0961",
-      "Key_I"
-    ],
-    [
-      "0bdeb14c-d579-48f4-80e5-e87b769a9dcc",
-      "Key_J"
-    ],
-    [
-      "55497c43-0fb8-4b15-b832-9e4327e3ccf3",
-      "Key_K"
-    ],
-    [
-      "f2360d46-047f-43e1-bfb4-4a362c4c819f",
-      "Key_L"
-    ],
-    [
-      "140b166f-8a9a-49b8-b9da-b1f4c2b64884",
-      "Key_M"
-    ],
-    [
-      "80a7bcc7-f8f3-4d16-abf8-968bd69cd248",
-      "Key_N"
-    ],
-    [
-      "53655291-cb05-474c-a29c-fac2052272f6",
-      "Key_O"
-    ],
-    [
-      "2bda33b0-3eba-4ccc-8223-79532bbdfb6c",
-      "Key_P"
-    ],
-    [
-      "befe27b5-8d8d-4dbb-8648-2e5abc1f9a23",
-      "Key_Q"
-    ],
-    [
-      "3f1e3a8f-f5f7-4a18-90d8-b8bd8833a121",
-      "Key_R"
-    ],
-    [
-      "fb34966c-cb7d-415a-8815-c4900381a08f",
-      "Key_S"
-    ],
-    [
-      "b380df06-2e2f-484c-9d89-f57a3faac3e9",
-      "Key_T"
-    ],
-    [
-      "cf7213b0-1bed-4d64-8a66-96a9afff3673",
-      "Key_U"
-    ],
-    [
-      "406f3bd2-8f1c-4d8f-845a-8d5e71970193",
-      "Key_V"
-    ],
-    [
-      "06e7c63d-33a9-4d3d-8bea-a8d2edf1c515",
-      "Key_W"
-    ],
-    [
-      "54853a17-57c3-4c28-9f29-fe5206c31e1d",
-      "Key_X"
-    ],
-    [
-      "b042f156-6d2a-4266-9786-7e4d81af1312",
-      "Key_Y"
-    ],
-    [
-      "18483323-407a-449d-9b5d-151854be4dfa",
-      "Key_Z"
-    ],
-    [
-      "5a1e5b4a-caa1-45e6-8bf0-1272be35ba11",
-      "Key_Enter_2"
-    ],
-    [
-      "53ed0d9f-56a9-477a-b5b0-d82e9ee14346",
-      "Key_Space_2"
-    ],
-    [
-      "03e19e54-6599-4cec-9c13-1040d0c9a7b3",
-      "Key_Space_3"
-    ],
-    [
-      "1eb107e0-86b8-40e3-bbf1-68f7d86a6fd2",
-      "Key_0_Num"
-    ],
-    [
-      "df0dc9e8-891e-4b88-8c5d-e46b14cade72",
-      "Key_1_Num"
-    ],
-    [
-      "0a38b20d-0faa-4d31-a26b-20b67656c706",
-      "Key_0"
-    ],
-    [
-      "2e527372-0884-45fd-898b-02a719c2cb54",
-      "Key_1"
-    ],
-    [
-      "cefb41bf-1a3e-4ea5-a512-232860cf1a63",
-      "Key_2"
-    ],
-    [
-      "f6fee24c-a55a-4682-9cb6-60a6d7817932",
-      "Key_3"
-    ],
-    [
-      "93220f56-012c-451a-a18f-bdae9a33cdd3",
-      "Key_4"
-    ],
-    [
-      "5c3814d4-ecfb-4502-97e7-f6b610c9d2c2",
-      "Key_5"
-    ],
-    [
-      "ba23ecf4-051e-4430-acc2-1c1196330922",
-      "Key_6"
-    ],
-    [
-      "a9606fda-6978-4bab-abe5-85dd31fad076",
-      "Key_7"
-    ],
-    [
-      "dbc80516-9244-43e8-a9f9-a287eb0318d7",
-      "Key_8"
-    ],
-    [
-      "ac7b69ae-cfad-4e0a-9800-50ade6da3f1a",
-      "Key_9"
-    ],
-    [
-      "bcb00a62-6a60-4163-9bd4-c098b779e64b",
-      "Key_Colon"
-    ],
-    [
-      "ec0a90c0-fb69-482d-998e-1c16282f9d5e",
-      "Key_Semicolon"
-    ],
-    [
-      "88ac29ea-f33a-4435-9d0f-ff07fcd43825",
-      "Key_Comma"
-    ],
-    [
-      "e70c17f5-360b-4968-9f32-99d3f56f030c",
-      "Key_Minus"
-    ],
-    [
-      "89027e3c-f493-4dce-ae70-8265229fcf10",
-      "Key_Dot"
-    ],
-    [
-      "6b92f5e9-e549-40aa-8d35-8aae643bb2bd",
-      "Key_Slash"
-    ],
-    [
-      "ef596442-4faa-4473-b2b4-5b6601bfdc98",
-      "Key_Enter_1"
-    ],
-    [
-      "95881138-91f0-4cce-a1e0-677178aa263b",
-      "Key_Clear"
-    ],
-    [
-      "1c1fabda-0579-4558-988c-9b382a381018",
-      "Key_Break"
-    ],
-    [
-      "a4201793-45b0-4b94-9056-69a6df9fd156",
-      "Key_Up"
-    ],
-    [
-      "6d556685-82e0-4e92-b677-a71dd488b8ff",
-      "Key_Down"
-    ],
-    [
-      "d1278f77-fa67-4785-892a-d83988480cae",
-      "Key_Left"
-    ],
-    [
-      "00fbda68-6dbe-4629-bc6b-7a96ad5ec6ad",
-      "Key_Right"
-    ],
-    [
-      "1fe60ac2-c983-40d1-a281-3641b8cb25a1",
-      "Key_Space_1"
-    ],
-    [
-      "63cdcd2d-252d-4e9b-8416-81b1ef161316",
-      "Key_LShift"
-    ],
-    [
-      "9d134df2-74d2-4889-953d-4fad81dfc3e2",
-      "Key_RShift"
-    ],
-    [
-      "96914db0-479c-4269-8d64-79a09cf1464b",
-      "Key_Reset"
-    ],
-    [
-      "69b1d1ec-8387-44f7-a838-b6d24599c077",
-      "Key_2_Num"
-    ],
-    [
-      "3e4262d3-7e8a-4be5-8940-6ee58babaa4e",
-      "Key_3_Num"
-    ],
-    [
-      "6d1a5cc9-05ff-4514-870b-d92d4e7f20d7",
-      "Key_4_Num"
-    ],
-    [
-      "a0e49a48-5b42-4ed9-bb98-25da31a7426a",
-      "Key_5_Num"
-    ],
-    [
-      "5ecf1c0e-79d8-4322-bb79-173a1144918b",
-      "Key_6_Num"
-    ],
-    [
-      "f43a5c84-e92d-4f60-bebe-d8d1cffb1cd4",
-      "Key_7_Num"
-    ],
-    [
-      "d8116153-b017-4756-b331-164053fc25d1",
-      "Key_8_Num"
-    ],
-    [
-      "3ce54b27-6dfd-4362-b55f-6b7a956f8932",
-      "Key_9_Num"
-    ],
-    [
-      "62e5320d-f8ce-4c7b-a38b-1e6c37e2c7a2",
-      "Key_Dot_Num"
-    ],
-    [
-      "9b16f006-50f9-4ce4-ae42-c5c18fa91fce",
-      "Key_Enter_Num"
     ]
   ],
   "text_variables": {}
