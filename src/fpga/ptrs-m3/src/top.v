@@ -532,10 +532,48 @@ end
 
 reg [7:0] keyb_matrix[0:7];
 
+/*
 always @(posedge clk) begin
   if (trigger_action && cmd == send_keyb) begin
     keyb_matrix[params[0]] <= params[1];
   end
+end
+*/
+
+localparam [2:0] keyb_num_states = 3'd5;
+reg [keyb_num_states - 1:0] keyb_scan_state = 5'd1;
+
+reg [2:0] keyb_row = 3'd0;
+assign PMOD[0] = keyb_row[0];
+assign PMOD[1] = keyb_row[1];
+assign PMOD[2] = keyb_row[2];
+
+always @(posedge clk) begin
+  keyb_scan_state <= {keyb_scan_state[keyb_num_states - 2:0], keyb_scan_state[keyb_num_states - 1]};
+end
+
+assign keyb_sel_lower_nibble  = keyb_scan_state[0];
+assign keyb_read_lower_nibble = keyb_scan_state[1];
+assign keyb_sel_upper_nibble  = keyb_scan_state[2];
+assign keyb_read_upper_nibble = keyb_scan_state[3];
+assign keyb_next_row          = keyb_scan_state[4];
+
+reg keyb_nibble_sel = 1'b0;
+assign PMOD[3] = keyb_nibble_sel;
+
+wire [3:0] keyb_nibble = ~{PMOD[4], PMOD[5], PMOD[6], PMOD[7]};
+reg [3:0] keyb_lower_nibble = 4'b0;
+
+
+always @(posedge clk) begin
+  if (keyb_sel_lower_nibble) keyb_nibble_sel <= 1'b0;
+  if (keyb_sel_upper_nibble) keyb_nibble_sel <= 1'b1;
+end
+
+always @(posedge clk) begin
+  if (keyb_read_lower_nibble) keyb_lower_nibble <= keyb_nibble;
+  if (keyb_read_upper_nibble) keyb_matrix[keyb_row] <= {keyb_lower_nibble, keyb_nibble};
+  if (keyb_next_row) keyb_row <= keyb_row + 3'd1;
 end
 
 wire keyb_matrix_pressed = |(keyb_matrix[7] | keyb_matrix[6] | keyb_matrix[5] | keyb_matrix[4] |
@@ -794,6 +832,7 @@ assign CASS_OUT_R = cass_pdmr_reg[9];
 
 //------------LiteBrite-80---------------------------------------------------------------
 
+/*
 wire lb80_update = io_access & (~TRS_RD | ~TRS_WR);
 
 reg [7:0] pmod_a;
@@ -806,7 +845,7 @@ end
 
 assign PMOD = {~pmod_a[7:5], ~pmod_a[1], pmod_a[4:2], pmod_a[0]};
 //assign PMOD = {pmod_a[4:2], pmod_a[0], pmod_a[7:5], pmod_a[1]};
-
+*/
 
 //----XFLASH---------------------------------------------------------------------
 
