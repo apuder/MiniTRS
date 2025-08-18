@@ -35600,6 +35600,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C598540"
+			(at 284.48 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "3"
 			(uuid "7c50cae8-2370-4064-8de7-c331c69b1ea0")
 		)
@@ -36452,7 +36461,7 @@
 				)
 			)
 		)
-		(property "Value" "150"
+		(property "Value" "150pF"
 			(at 415.036 102.362 90)
 			(effects
 				(font
@@ -38192,6 +38201,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C3324132"
+			(at 71.12 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "72eb0d93-6cda-4f77-ba46-47522994ffed")
 		)
@@ -39382,7 +39400,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Horizontal"
 			(at 438.15 57.15 0)
 			(effects
 				(font
@@ -39409,7 +39427,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C2937625"
+		(property "LCSC" "C492410"
 			(at 438.15 57.15 0)
 			(effects
 				(font
@@ -39784,7 +39802,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "150"
+		(property "Value" "150pF"
 			(at 366.014 61.468 0)
 			(effects
 				(font
@@ -40231,6 +40249,15 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 186.69 227.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C225477"
 			(at 186.69 227.33 0)
 			(effects
 				(font
@@ -41587,6 +41614,15 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 186.69 209.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C225477"
 			(at 186.69 209.55 0)
 			(effects
 				(font
