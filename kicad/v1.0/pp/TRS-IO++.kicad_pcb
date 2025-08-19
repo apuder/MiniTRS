@@ -5911,6 +5911,19 @@
 				)
 			)
 		)
+		(property "LCSC" "C720648"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "11b39471-8110-44df-aba8-d20b031142b8")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "Potentiometer*")
 		(path "/63f0e269-2f1e-4452-b506-810c24e3a77b")
 		(sheetname "/")

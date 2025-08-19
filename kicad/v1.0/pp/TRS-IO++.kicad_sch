@@ -36033,6 +36033,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C720648"
+			(at 381 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "081b20c9-2e6e-4741-bf47-0e8d9ebac7c5")
 		)
