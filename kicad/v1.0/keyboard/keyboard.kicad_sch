@@ -1201,6 +1201,228 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Connector:Barrel_Jack_Switch"
+			(pin_names
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "J"
+				(at 0 5.334 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Barrel_Jack_Switch"
+				(at 0 -5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 1.27 -1.016 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 1.27 -1.016 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "DC Barrel Jack with an internal switch"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "DC power barrel jack connector"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "BarrelJack*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Barrel_Jack_Switch_0_1"
+				(rectangle
+					(start -5.08 3.81)
+					(end 5.08 -3.81)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.81 -2.54) (xy -2.54 -2.54) (xy -1.27 -1.27) (xy 0 -2.54) (xy 2.54 -2.54) (xy 5.08 -2.54)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -3.302 1.905)
+					(mid -3.9343 2.54)
+					(end -3.302 3.175)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -3.302 1.905)
+					(mid -3.9343 2.54)
+					(end -3.302 3.175)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -2.286) (xy 1.905 -1.651)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 3.683 3.175)
+					(end -3.302 1.905)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.08 2.54) (xy 3.81 2.54)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.08 0) (xy 1.27 0) (xy 1.27 -2.286) (xy 0.635 -1.651)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Barrel_Jack_Switch_1_1"
+				(pin passive line
+					(at 7.62 2.54 180)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 0 180)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 -2.54 180)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Connector_Audio:AudioJack3_SwitchTR"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -5709,6 +5931,12 @@
 		(uuid "dc7da78b-9dc7-4785-b52b-c2eab13223ae")
 	)
 	(junction
+		(at 172.085 248.285)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "dea6611f-90fc-4cfa-8ea8-d3fd97fb6284")
+	)
+	(junction
 		(at 52.07 267.335)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -6658,6 +6886,16 @@
 	)
 	(wire
 		(pts
+			(xy 179.705 245.745) (xy 179.705 243.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3f0d857b-2c96-4a3c-996d-fc2f32ed1611")
+	)
+	(wire
+		(pts
 			(xy 48.26 177.8) (xy 53.34 177.8)
 		)
 		(stroke
@@ -6765,6 +7003,16 @@
 			(type default)
 		)
 		(uuid "4759bd3d-296e-4c55-a9a6-ae3e77d7f765")
+	)
+	(wire
+		(pts
+			(xy 177.165 245.745) (xy 177.165 243.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "475d62e1-6d82-4bf6-a1ae-723235617012")
 	)
 	(wire
 		(pts
@@ -7195,6 +7443,16 @@
 			(type default)
 		)
 		(uuid "654b4c7b-76fe-40a4-96cd-71327d532bab")
+	)
+	(wire
+		(pts
+			(xy 170.18 245.745) (xy 177.165 245.745)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "65bd8b98-8edb-4606-b81b-b107c16dbb29")
 	)
 	(wire
 		(pts
@@ -7768,6 +8026,16 @@
 	)
 	(wire
 		(pts
+			(xy 172.085 248.285) (xy 172.085 250.825)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8d40567b-6c9b-4c06-80ef-e982b953642a")
+	)
+	(wire
+		(pts
 			(xy 345.44 90.17) (xy 341.63 90.17)
 		)
 		(stroke
@@ -7815,6 +8083,16 @@
 			(type default)
 		)
 		(uuid "908eacae-3565-4339-83f7-9486da8f40ad")
+	)
+	(wire
+		(pts
+			(xy 172.085 250.825) (xy 170.18 250.825)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "909c9adb-19f8-4f75-bd20-e8e7ee4192ea")
 	)
 	(wire
 		(pts
@@ -8388,6 +8666,16 @@
 	)
 	(wire
 		(pts
+			(xy 170.18 248.285) (xy 172.085 248.285)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b9b57039-db09-42ec-9741-ab02ee11802c")
+	)
+	(wire
+		(pts
 			(xy 179.705 103.505) (xy 191.77 103.505)
 		)
 		(stroke
@@ -8755,6 +9043,16 @@
 			(type default)
 		)
 		(uuid "cfe8fc9c-cabe-4f11-bd21-c125ae2d6151")
+	)
+	(wire
+		(pts
+			(xy 179.705 245.745) (xy 186.69 245.745)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d060941f-229d-494c-a407-65b59d126771")
 	)
 	(wire
 		(pts
@@ -9185,6 +9483,16 @@
 			(type default)
 		)
 		(uuid "e75521d7-c4e2-46ee-b6a0-6f0faccebc56")
+	)
+	(wire
+		(pts
+			(xy 172.085 248.285) (xy 186.69 248.285)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e79c1736-6680-4d93-a69c-4285e45dbe88")
 	)
 	(wire
 		(pts
@@ -10902,6 +11210,76 @@
 			(project ""
 				(path "/0f558864-6bd1-4b6a-a590-291604d36a33"
 					(reference "#FLG03")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x02")
+		(at 177.165 238.76 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0920ad91-9b4c-4860-8356-40734a7b7099")
+		(property "Reference" "J8"
+			(at 182.88 237.4899 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "Pwr Switch"
+			(at 182.88 240.0299 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
+			(at 177.165 238.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 177.165 238.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 177.165 238.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4bee117d-5a12-41aa-8ae7-7590a6d8654a")
+		)
+		(pin "2"
+			(uuid "81da62b9-192e-4826-8bda-c288ecb6352d")
+		)
+		(instances
+			(project "keyboard"
+				(path "/0f558864-6bd1-4b6a-a590-291604d36a33"
+					(reference "J8")
 					(unit 1)
 				)
 			)
@@ -12823,6 +13201,76 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector_Generic:Conn_01x02")
+		(at 191.77 245.745 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2ebc4d92-b757-4bdd-90ae-4f1747c2061c")
+		(property "Reference" "J7"
+			(at 194.31 245.7449 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Pwr Supply"
+			(at 194.31 248.2849 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
+			(at 191.77 245.745 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 191.77 245.745 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 191.77 245.745 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ecd29280-3cf2-43b3-96c3-522b06feb8e5")
+		)
+		(pin "2"
+			(uuid "1891daa3-bed4-408b-b94a-185dac4a0f57")
+		)
+		(instances
+			(project ""
+				(path "/0f558864-6bd1-4b6a-a590-291604d36a33"
+					(reference "J7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 236.22 204.47 0)
 		(unit 1)
@@ -13780,6 +14228,77 @@
 			(project "keyboard"
 				(path "/0f558864-6bd1-4b6a-a590-291604d36a33"
 					(reference "#PWR019")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Barrel_Jack_Switch")
+		(at 162.56 248.285 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "4095e07b-b36f-4062-8aa7-8fce8c9378ce")
+		(property "Reference" "J6"
+			(at 162.56 243.205 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Barrel_Jack_Switch"
+			(at 162.56 242.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Connector_BarrelJack:BarrelJack_Horizontal"
+			(at 163.83 249.301 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 163.83 249.301 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 162.56 248.285 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d92eb693-36db-49a5-9225-095fff4de5c4")
+		)
+		(pin "2"
+			(uuid "41069f72-10e3-4534-958c-69a8c5d7a33a")
+		)
+		(pin "3"
+			(uuid "abd4512b-ef16-470b-98fd-f1e9a9b7bd30")
+		)
+		(instances
+			(project "keyboard"
+				(path "/0f558864-6bd1-4b6a-a590-291604d36a33"
+					(reference "J6")
 					(unit 1)
 				)
 			)
