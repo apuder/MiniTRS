@@ -70,7 +70,8 @@ localparam [3:0]
   mode_ptrs_m1     = 4'b0001,
   mode_ptrs_m3     = 4'b0011,
   mode_ptrs_m4     = 4'b0100,
-  mode_ptrs_m4p    = 4'b0101;
+  mode_ptrs_m4p    = 4'b0101,
+  mode_custom_1    = 4'b0110;
 
 localparam add_dip_4 = 1'b1;
 wire [3:0] this_mode = mode_ptrs_m3;
@@ -541,16 +542,23 @@ end
 */
 
 localparam [2:0] keyb_num_states = 3'd5;
-reg [keyb_num_states - 1:0] keyb_scan_state = 5'd1;
+//reg [keyb_num_states - 1:0] keyb_scan_state = 5'd1;
+reg [4:0] keyb_scan_state = 5'd1;
 
 reg [2:0] keyb_row = 3'd0;
+
 assign PMOD[0] = keyb_row[0];
 assign PMOD[1] = keyb_row[1];
 assign PMOD[2] = keyb_row[2];
 
+reg [3:0] keyb_counter = 0;
+
+
 always @(posedge clk) begin
-  keyb_scan_state <= {keyb_scan_state[keyb_num_states - 2:0], keyb_scan_state[keyb_num_states - 1]};
+  keyb_counter <= keyb_counter + 1;
+  if (keyb_counter == 0) keyb_scan_state <= {keyb_scan_state[3:0], keyb_scan_state[4]};
 end
+
 
 assign keyb_sel_lower_nibble  = keyb_scan_state[0];
 assign keyb_read_lower_nibble = keyb_scan_state[1];
@@ -561,19 +569,18 @@ assign keyb_next_row          = keyb_scan_state[4];
 reg keyb_nibble_sel = 1'b0;
 assign PMOD[3] = keyb_nibble_sel;
 
-wire [3:0] keyb_nibble = ~{PMOD[4], PMOD[5], PMOD[6], PMOD[7]};
+wire [3:0] keyb_nibble = ~{PMOD[7], PMOD[6], PMOD[5], PMOD[4]};
 reg [3:0] keyb_lower_nibble = 4'b0;
 
 
 always @(posedge clk) begin
-  if (keyb_sel_lower_nibble) keyb_nibble_sel <= 1'b0;
-  if (keyb_sel_upper_nibble) keyb_nibble_sel <= 1'b1;
-end
-
-always @(posedge clk) begin
-  if (keyb_read_lower_nibble) keyb_lower_nibble <= keyb_nibble;
-  if (keyb_read_upper_nibble) keyb_matrix[keyb_row] <= {keyb_lower_nibble, keyb_nibble};
-  if (keyb_next_row) keyb_row <= keyb_row + 3'd1;
+  if (keyb_counter == 0) begin
+    if (keyb_sel_lower_nibble) keyb_nibble_sel <= 1'b0;
+    if (keyb_sel_upper_nibble) keyb_nibble_sel <= 1'b1;
+    if (keyb_read_lower_nibble) keyb_lower_nibble <= keyb_nibble;
+    if (keyb_read_upper_nibble) keyb_matrix[keyb_row] <= {keyb_nibble, keyb_lower_nibble};
+    if (keyb_next_row) keyb_row <= keyb_row + 3'd1;
+  end
 end
 
 wire keyb_matrix_pressed = |(keyb_matrix[7] | keyb_matrix[6] | keyb_matrix[5] | keyb_matrix[4] |
@@ -1079,12 +1086,13 @@ always @ (posedge clk)
 
 
 //assign LED[0] = z80_rst;
-
 assign LED[0] = ~extiosel_in_n;
 assign LED[1] = ~wait_in_n;
 assign LED[2] = ~int_in_n;
 //assign LED[0] = keyb_matrix_pressed;
 //assign LED[1] = xio_enab;
 assign LED[3] = heartbeat[25] | spi_error;
+
+
 
 endmodule
