@@ -940,7 +940,7 @@ wire z80_clk = z80_clkL;
 reg [3:0] z80_rst_cnt = 4'b0;
 
 always @ (posedge clk) begin
-  if (trigger_action && cmd == ptrs_rst) z80_rst_cnt <= 4'b1111;
+  if ((trigger_action && cmd == ptrs_rst) || keyb_matrix[7][7]) z80_rst_cnt <= 4'b1111;
   else if (z80_rst_cnt != 0) z80_rst_cnt <= z80_rst_cnt - 1;
 end
 
