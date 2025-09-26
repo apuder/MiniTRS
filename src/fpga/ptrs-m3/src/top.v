@@ -43,7 +43,7 @@ module top(
   output UART_TX,
 
   input [3:0] CONF,
-  output [3:0] LED,
+  output reg [3:0] LED,
   output reg LED_GREEN,
   output reg LED_RED,
   output reg LED_BLUE,
@@ -591,9 +591,15 @@ wire keyb_matrix_pressed = |(keyb_matrix[7] | keyb_matrix[6] | keyb_matrix[5] | 
 
 always @(posedge clk) begin
   if (trigger_action && cmd == set_led) begin
-    LED_RED   <= params[0][0];
-    LED_GREEN <= params[0][1];
-    LED_BLUE  <= params[0][2];
+    if (params[0][7]) begin
+      LED[2] <= params[0][0];
+      LED[3] <= params[0][1];
+    end
+    else begin
+      LED_RED   <= params[0][0];
+      LED_GREEN <= params[0][1];
+      LED_BLUE  <= params[0][2];
+    end
   end
 end
 
@@ -1086,12 +1092,12 @@ always @ (posedge clk)
 
 
 //assign LED[0] = z80_rst;
-assign LED[0] = ~extiosel_in_n;
-assign LED[1] = ~wait_in_n;
-assign LED[2] = ~int_in_n;
+//assign LED[0] = ~extiosel_in_n;
+//assign LED[1] = ~wait_in_n;
+//assign LED[2] = ~int_in_n;
 //assign LED[0] = keyb_matrix_pressed;
 //assign LED[1] = xio_enab;
-assign LED[3] = heartbeat[25] | spi_error;
+//assign LED[3] = heartbeat[25] | spi_error;
 
 
 
