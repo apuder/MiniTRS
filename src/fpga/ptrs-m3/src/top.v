@@ -1099,6 +1099,4 @@ always @ (posedge clk)
 //assign LED[1] = xio_enab;
 //assign LED[3] = heartbeat[25] | spi_error;
 
-
-
 endmodule
