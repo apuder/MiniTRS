@@ -36207,7 +36207,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Potentiometer_SMD:Potentiometer_Bourns_TC33X_Vertical"
+		(property "Footprint" "Potentiometer_THT:Potentiometer_Bourns_3266W_Vertical"
 			(at 381 58.42 0)
 			(effects
 				(font
@@ -36234,7 +36234,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C720648"
+		(property "LCSC" "C123864"
 			(at 381 58.42 0)
 			(effects
 				(font
